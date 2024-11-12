@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Area untuk menggambar angka -->
+    <com.example.draw.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Output angka yang terdeteksi -->
+    <TextView
+        android:id="@+id/detectedNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil: 0"
+        android:textSize="24sp"
+        android:textColor="#000"
+        android:layout_below="@id/drawingView"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Grafik Persentase Deteksi -->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/detectedNumberText"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
